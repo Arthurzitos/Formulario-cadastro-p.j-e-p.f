@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - VIPCommerce</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--- Início do Header 
+        <img src="img/VipCommerceBG.jpg" alt="Logo VIP Commerce">
+        --->
+    <header class="header-container">
+
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="nav-items"><a href="#" class="menu-items">Home</a></li>
+                <li class="nav-items"><a href="#" class="menu-items">Sobre</a></li>
+                <li class="nav-items"><a href="#" class="menu-items">Contato</a></li>
+            </ul>
+        </nav>
+    </header>  <!--- Fim do Header --->
+
+    <!--- Início do Container --->
+    <div class="container">
+
+        <!--- Início do Formulério --->
+        <div class="form">
+            <form action="#">
+
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="person-button">
+                        <button><a href="physical-person.html">É Pessoa Física? <br> Clique aqui!</a></button>
+                    </div>
+                </div>
+
+                <!--- Início dos inputs --->
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="fantasyName">Nome Fantasia</label>
+                        <input id="fantasyName" class="fantasy-name" type="text" name="fantasyName" placeholder="Vip">
+                        <span class="fantasyName">Este campo é obrigatório!</span>
+                    </div>
+                    <div class="input-box">
+                        <label for="corporateName">Razão Social</label>
+                        <input id="corporateName" class="corporate-name" type="text" name="corporateName" placeholder="Commerce" >
+                        <span class="corporateName">Este campo é obrigatório!</span>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cnpj">CNPJ</label>
+                        <input id="cnpj" class="cnpjErro" type="tel" name="cnpj" placeholder="000.000.000-00" >
+                        <span class="cnpjErro">Este campo é obrigatório!</span>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="ie">Inscrição Estadual</label>
+                        <input id="ie" class="ieErro" type="tel" name="ie" placeholder="123456789" >
+                        <span class="ieErro">Este campo é obrigatório!</span>
+                    </div>
+                    
+                </div>  <!--- Fim dos inputs --->
+
+                <!--- Início da seleção de gênero --->
+                <div class="gender-options">
+                    <div class="gender-title">
+                        <h6>Gênero</h6>
+                    </div>
+                    <div class="gender-group">
+                        <select name="gender" id="gender">
+                            <option value="undefined">Não Informado</option>
+                            <option value="female">Feminino</option>
+                            <option value="male">Masculino</option>
+                            <option value="none">Prefiro não dizer</option>
+                        </select>
+                    </div>
+                </div>  <!--- Fim da seleção de gênero --->
+
+                <!--- Início dos Termos de uso --->
+                <div class="service-terms">
+                    <div class="terms-group">
+                        <div class="terms-input">
+                            <input type="checkbox" name="service-terms" id="smsTerms" value="sms">
+                            <label for="smsTerms">Quero receber atualizações via SMS</label>
+                        </div>
+                        <div class="terms-input">
+                            <input type="checkbox" name="service-terms" id="emailTerms" value="sms">
+                            <label for="emailTerms">Quero receber atualizações via e-mail</label>
+                        </div>
+                        <div class="terms-input">
+                            <input type="checkbox" name="service-terms" id="serviceTerms" value="sms">
+                            <label for="serviceTerms">Declaro que li e concordo com os <a href="#">termos de serviço</a> e <a href="#">política de privacidade</a></label>
+                        </div>
+                    </div>
+                </div>  <!--- Fim dos Termos de uso --->
+
+                <div class="continue-button">
+                    <button type="submit">Cadastrar</button>
+                </div>
+
+            </form>
+        </div>  <!--- Fim do Formulério --->
+
+    </div>  <!--- Fim do Container --->
+
+    <footer class="footer-container">
+        <h4>&copy; 2022 - CD2 Retail Tech</h4>
+    </footer>
+
+   <script src="js/legal-person.js"></script>
+</body>
+</html>

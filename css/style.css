@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Declaração de variáveis de cor
+----------------------------------*/
+:root {
+    /* Cores básicas
+    -----------------*/
+    --primary: #0473bd;
+    --secondary: #8cc63f;
+    --secondaryHover: #9fcf5f;
+    --container: #fff;
+
+    /* Cores de Fontes
+    -------------------*/
+    --textColor: #000000c0;
+    --textButtons: #fff;
+
+    /* Cores de Formulários
+    ------------------------*/
+    --inputHover: #eeeeee75;
+    --inputShadow: #0000001c;
+    --placeHolder: #000000be;
+}
+
+/* Formatações Gerais
+----------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary);
+}
+
+/* Formatando o Header
+-----------------------*/
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    background-color: var(--container);
+}
+
+.nav-items {
+    display: inline-flex;
+    margin: 12px;
+}
+
+.menu-items {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 2px;
+
+    color: var(--secondary);
+}
+
+.menu-items:hover {
+    color: var(--primary);
+    background-color: var(--secondary);
+    padding: 2px;
+    border-radius: 10px;
+}
+
+/* Formatando o Container
+--------------------------*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    margin: 0 auto;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+
+
+/* Formatando o Cabeçalho do Formulário
+----------------------------------------*/
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--container);
+    padding: 3rem;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Formatando botão de "pessoa"
+-------------------------------*/
+.person-button {
+    display: flex;
+    align-items: center;
+}
+
+.person-button button {
+    border: none;
+    background-color: var(--secondary);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.person-button button:hover {
+    background-color: var(--secondaryHover);
+}
+
+.person-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--textButtons);
+}
+
+/* Formatando título do formulário
+-----------------------------------*/
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: var(--secondary);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+/* Formatando Inputs
+---------------------*/
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0 1rem;
+
+    margin: 0.2rem;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px var(--inputShadow);
+}
+
+.input-box input:hover {
+    background-color: var(--inputHover);
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid var(--secondary);
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+.input-box input::placeholder {
+    color: var(--placeHolder);
+}
+
+/* Estilizando Formulário no estado ativo
+------------------------------------------*/
+.input-box > span {
+    display: none
+}
+
+span.error-text {
+    display: inline;
+    width: 100%;
+    text-align: right;
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    color: #FF7979;
+}
+
+/* Seleção de gênero
+---------------------*/
+.gender-group select{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px var(--inputShadow);
+}
+
+.gender-group select:hover {
+    background-color: var(--inputHover);
+}
+
+.gender-group select:focus-visible {
+    outline: 1px solid var(--secondary);
+}
+
+.gender-group label, 
+.gender-group option {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+/* Botão de cadastro
+---------------------*/
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: var(--secondary);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: var(--secondaryHover);
+}
+
+.continue-button button {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: var(--textButtons);
+}
+
+/* Termos de serviço e contato
+-------------------------------*/
+.service-terms {
+    margin-top: 2rem;
+}
+
+.terms-input {
+    margin: 0.5rem;
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+/* Rodapé
+----------*/
+.footer-container {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+/* Responsividade 
+------------------*/
+
+@media only screen and (max-width: 1200px){}
+
+
+@media only screen and (max-width: 992px){
+
+    .container {
+        width: 70%;
+        height: auto;
+    }
+    
+}
+
+@media only screen and (max-width: 768px){
+
+    .container {
+        width: 70%;
+        height: auto;
+    }
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+@media only screen and (max-width: 600px){
+    .container {
+        width: 70%;
+        height: auto;
+    }
+    .form-header {
+        display: flex;
+        flex-direction: column;
+    }
+}
+    
